@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a shell script that asks the user to type a phrase
+echo "Type a phrase: "
+
+read phrase
+word_number=$(echo $phrase | wc -w)
+space_number=$(echo $phrase | tr -cd [:space:] | wc -c )
+echo "The number of words is $word_number"
+echo "The number of white spaces is $((space_number - 1))"
